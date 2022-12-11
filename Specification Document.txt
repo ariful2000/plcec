@@ -3,6 +3,7 @@ Specification Document
 Rules for all literal values:
 '=', '+', '-', '/', '*', '(', ')', ',', ';'
 these are the literals 
+we are using sly
 doing basic operations
 Description of every data type that is provided with the language
 we have data types, if (condition), else(condition), 
