@@ -1,6 +1,6 @@
 from sly import Lexer
 
-class BasicLexer(Lexer):
+class Lex(Lexer):
     
     literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
 
@@ -46,11 +46,11 @@ class BasicLexer(Lexer):
 
 
 if __name__ == '__main__':
-    lexer = BasicLexer()
+    lexer = Lex()
     env = {}
     while True:
         try:
-            text = input('basic > ')
+            text = input('Start ==> ')
         except EOFError:
             break
         if text:
