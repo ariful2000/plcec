@@ -1,7 +1,7 @@
 from sly import Lexer
 from sly import Parser
 
-class BasicLexer(Lexer):
+class Lex(Lexer):
     
     literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
     
@@ -47,8 +47,8 @@ class BasicLexer(Lexer):
     def newline(self,t ):
         self.lineno = t.value.count('\n')
 
-class BasicParser(Parser):
-    tokens = BasicLexer.tokens
+class Par(Parser):
+    tokens = Lex.tokens
 
     precedence = (
         ('left', '+', '-'),
@@ -127,12 +127,12 @@ class BasicParser(Parser):
         return ('num', p.NUMBER)
 
 if __name__ == '__main__':
-    lexer = BasicLexer()
-    parser = BasicParser()
+    lexer = Lex()
+    parser = Par()
     env = {}
     while True:
         try:
-            text = input('basic > ')
+            text = input('Start ==> ')
         except EOFError:
             break
         if text:
