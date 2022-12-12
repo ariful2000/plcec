@@ -1,0 +1,1 @@
+IF x == 10 THEN x = x * 2 ELSE x = x * 5
