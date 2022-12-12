@@ -5,6 +5,7 @@ Rules for all literal values:
 these are the literals 
 we are using sly
 doing basic operations
+
 Description of every data type that is provided with the language
 we have data types, if (condition), else(condition), 
 for(top use loop), fun (method)
@@ -14,9 +15,11 @@ Rules for how variables are created, operated upon, expressed, and evaluated
 we can assign variable by simply typing a character (a,b or anything)
 for example a = 5 
 b = 7, a + b = 12
+
 Rules for the control structures:
-	For control flow we are using simple if statement 
-	and we are using for loop for looping
+For control flow we are using simple if statement 
+and we are using for loop for looping
+	
 Functions/methods/subprograms and the rules around them
 here we can use functions without parameters.
 then we use the arrow keyword
@@ -29,7 +32,10 @@ to call the function we can write functiontest()
 
 Keywords and Special symbols and all of their function
 given in the code. they all are doing basic operations
+
 Semantics for each syntax rule that is defined.
+it has semantic analyzer to see if symantic rule shave broken rules (errors)
+
 Instructions of how to create valid code.
 to create valid code:
 x = 20
