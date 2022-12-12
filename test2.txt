@@ -1,0 +1,4 @@
+
+asd5 + 56asd 
+
+Syntax error at line 1, token=NAME
