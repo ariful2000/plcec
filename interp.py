@@ -2,7 +2,7 @@ from sly import Lexer
 from sly import Parser
 
 
-class BasicLexer(Lexer):
+class Lex(Lexer):
 
     literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
     
@@ -46,8 +46,8 @@ class BasicLexer(Lexer):
     def newline(self,t ):
         self.lineno = t.value.count('\n')
 
-class BasicParser(Parser):
-    tokens = BasicLexer.tokens
+class Par(Parser):
+    tokens = Lex.tokens
 
     precedence = (
         ('left', '+', '-'),
@@ -128,7 +128,7 @@ class BasicParser(Parser):
 
 
 
-class BasicExecute:
+class Exe:
 
     def __init__(self, tree, env):
         self.env = env
@@ -219,8 +219,8 @@ class BasicExecute:
 
 
 if __name__ == '__main__':
-    lexer = BasicLexer()
-    parser = BasicParser()
+    lexer = Lex()
+    parser = Par()
     env = {}
     while True:
         try:
@@ -229,4 +229,4 @@ if __name__ == '__main__':
             break
         if text:
             tree = parser.parse(lexer.tokenize(text))
-            BasicExecute(tree, env)
+            Exe(tree, env)
